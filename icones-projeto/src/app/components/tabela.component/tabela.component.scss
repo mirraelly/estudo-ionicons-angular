@@ -1,0 +1,9 @@
+.filtro-vazio {
+ color: transparent;
+ stroke: black;
+}
+
+::ng-deep .p-column-filter-menu-button-active .filtro-vazio {
+    color: blue;
+    stroke:  blue;
+}
