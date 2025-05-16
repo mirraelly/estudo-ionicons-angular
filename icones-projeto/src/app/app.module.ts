@@ -15,6 +15,8 @@ import { ButtonModule } from 'primeng/button'; // Se você usar botões
 import { PaginatorModule } from 'primeng/paginator'; // Para a paginação
 import { OverlayPanelModule } from 'primeng/overlaypanel';
 import { MenuModule } from 'primeng/menu';
+import { TieredMenuModule } from 'primeng/tieredmenu';
+import { SplitButtonModule } from 'primeng/splitbutton';
 
 // import { SortIconModule } from 'primeng/sorticon'; // Pode se
 
@@ -29,6 +31,8 @@ import { MenuModule } from 'primeng/menu';
     PaginatorModule,
     TableModule,
     OverlayPanelModule,
+    SplitButtonModule,
+    TieredMenuModule,
     MenuModule,
     NgIconsModule.withIcons({ ...icons }),
   ],

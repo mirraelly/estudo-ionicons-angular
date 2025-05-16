@@ -82,18 +82,8 @@
           {{ pessoa.idade }}
 
           <p-overlayPanel #op>
-            <p-menu #menu [model]="configurarMenu()">
-              <ng-template pTemplate="item" let-item>
-                <div class="p-menuitem-content">
-                  <ng-icon
-                    [name]="item.icon"
-                    *ngIf="item.icon"
-                    style="width: 20px"
-                  ></ng-icon>
-                  <span>{{ item.label }}</span>
-                </div>
-              </ng-template>
-            </p-menu>
+            <!-- {{ configurarMenu() | json }} -->
+            <p-menu #menu [model]="configurarMenu()"> </p-menu>
           </p-overlayPanel>
           <p-button
             (click)="op.toggle($event)"
@@ -101,7 +91,25 @@
             label="Show"
           ></p-button>
         </td>
-        <td>{{ pessoa.sexo }}</td>
+        <td>
+          <span> {{ pessoa.sexo }}</span>
+
+          <span>
+            <div class="card flex justify-content-center">
+              <p-splitButton label="Save" icon="pi pi-plus" [model]="opcoes">
+                <ng-template pTemplate="triggericon">
+                  <ng-icon name="star2" style="width: 20px; margin-right: 1rem">
+                  </ng-icon>
+                  <span>Estrela</span>
+                </ng-template>
+                <ng-template pTemplate="dropdownicon">
+                  <ng-icon name="arrow" style="width: 20px; margin-right: 1rem">
+                  </ng-icon>
+                </ng-template>
+              </p-splitButton>
+            </div>
+          </span>
+        </td>
       </tr>
     </ng-template>
     <ng-template pTemplate="emptymessage">
