@@ -17,11 +17,14 @@ import { OverlayPanelModule } from 'primeng/overlaypanel';
 import { MenuModule } from 'primeng/menu';
 import { TieredMenuModule } from 'primeng/tieredmenu';
 import { SplitButtonModule } from 'primeng/splitbutton';
+import { SidebarModule } from 'primeng/sidebar';
+import { PanelMenuModule } from 'primeng/panelmenu';
+import { SidebarComponent } from './components/sidebar.component/sidebar.component';
 
 // import { SortIconModule } from 'primeng/sorticon'; // Pode se
 
 @NgModule({
-  declarations: [AppComponent, MinhaTabela],
+  declarations: [AppComponent, MinhaTabela, SidebarComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -35,6 +38,8 @@ import { SplitButtonModule } from 'primeng/splitbutton';
     TieredMenuModule,
     MenuModule,
     NgIconsModule.withIcons({ ...icons }),
+    SidebarModule,
+    PanelMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

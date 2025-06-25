@@ -1,0 +1,45 @@
+:host {
+  display: block;
+  padding: 1rem;
+}
+
+::ng-deep .p-panelmenu .p-menuitem-link {
+  background-color: transparent;
+  color: inherit;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+// Itens ativos (clicados ou com submenu expandido)
+::ng-deep .p-panelmenu .p-menuitem-link.p-highlight {
+  background-color: #FDEEF2 !important; /* rosa */
+  color: #6A1B9A !important;           /* roxo */
+}
+
+// Submenu ativo
+::ng-deep .p-panelmenu .p-submenu-list .p-menuitem-link.p-highlight  {
+  background-color: #FDEEF2 !important;
+  color: #6A1B9A !important;
+}
+
+::ng-deep .p-panelmenu .p-menuitem-link.p-highlight,
+::ng-deep .p-panelmenu .p-menuitem-link.p-menuitem-link-active,
+::ng-deep .p-panelmenu .p-menuitem-link.router-link-active {
+  background-color: #FDEEF2 !important;
+  color: #6A1B9A !important;
+}
+
+::ng-deep .p-panelmenu .p-menuitem-link.router-link-active ng-icon,
+::ng-deep .p-panelmenu .p-menuitem-link.p-highlight ng-icon {
+  color: #6A1B9A !important;
+}
+
+// Hover (opcional)
+::ng-deep .p-panelmenu .p-menuitem-link:hover {
+  background-color: #FDEEF2 !important;
+  color: #6A1B9A !important;
+}
+
+// Ícone de seta (expansão)
+::ng-deep .p-panelmenu .p-panelmenu-icon {
+  color: #6A1B9A !important;
+}

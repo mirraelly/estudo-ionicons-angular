@@ -1,0 +1,28 @@
+<p-panelMenu [model]="menuItems">
+  <ng-template let-item pTemplate="item">
+    <ng-container>
+      <!-- <a
+        href="#"
+        (click)="selectedLabel = item.label"
+        class="p-menuitem-link custom-menu-link"
+      > -->
+      <a href="#" class="p-menuitem-link custom-menu-link">
+        <!-- <ng-icon
+          *ngIf="item.id && !item.parent"
+          [name]="
+            selectedLabel === item.label ? item.state?.activeIcon : item.id
+          "
+          class="me-2"
+          style="width: 20px; height: 20px; color: #000000"
+        ></ng-icon> -->
+        <ng-icon
+          *ngIf="item.id && !item.parent"
+          [name]="item.expanded ? item.state?.activeIcon : item.id"
+          class="me-2"
+          style="width: 20px; height: 20px; color: #000000"
+        ></ng-icon>
+        {{ item.label }}
+      </a>
+    </ng-container>
+  </ng-template>
+</p-panelMenu>
